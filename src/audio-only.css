@@ -1,0 +1,36 @@
+html.bao-live-audio-only #live-player {
+  position: relative;
+}
+
+html.bao-live-audio-only #live-player video {
+  visibility: hidden !important;
+}
+
+html.bao-live-audio-only #live-player::after {
+  position: absolute;
+  z-index: 11;
+  top: 12px;
+  right: 12px;
+  padding: 6px 10px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 8px;
+  background: rgb(0 0 0 / 55%);
+  color: white;
+  content: "🎧 正在连接仅音频直播…";
+  font: 14px/1.4 system-ui, sans-serif;
+  pointer-events: none;
+}
+
+html.bao-live-audio-only.bao-live-audio-verified #live-player::after {
+  content: "🎧 仅音频直播";
+}
+
+html.bao-live-audio-only.bao-live-audio-failed #live-player::after {
+  border-color: rgb(255 120 120 / 45%);
+  background: rgb(120 20 20 / 80%);
+  content: "⚠ 当前直播无纯音频流，已停止播放；点击扩展图标恢复普通模式";
+}
+
+html.bao-live-audio-only .web-player-video-cover-img-wrap {
+  display: none !important;
+}

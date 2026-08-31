@@ -1,0 +1,24 @@
+{
+  "name": "bilibili-audio-only",
+  "version": "1.1.0",
+  "private": true,
+  "description": "A Manifest V3 extension for Bilibili live audio-only streams and on-demand DASH audio playback.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moqingx52/bilibili-audio-only.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moqingx52/bilibili-audio-only/issues"
+  },
+  "homepage": "https://github.com/moqingx52/bilibili-audio-only#readme",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "check": "npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
