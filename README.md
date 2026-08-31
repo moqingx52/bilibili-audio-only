@@ -8,13 +8,15 @@
 
 ## Windows 安装
 
-仓库已经包含构建好的 `dist` 目录：
+推荐从 [Releases](https://github.com/moqingx52/bilibili-audio-only/releases) 下载 `bilibili-audio-only-windows.zip`：
 
-1. 把整个项目复制到 Windows，或者只复制 `dist`。
+1. 把 ZIP 解压到固定目录。
 2. 打开 `chrome://extensions`。
 3. 打开右上角“开发者模式”。
 4. 点击“加载已解压的扩展程序”。
-5. 选择本项目的 `dist` 文件夹，不要选择 `src`。
+5. 选择解压后直接包含 `manifest.json` 的目录。
+
+如果从源码安装，请先运行 `npm run build`，然后选择生成的 `dist` 目录，不要选择 `src`。
 
 打开 Bilibili 直播间、视频、合集或番剧播放页，点击工具栏上的扩展图标切换。徽标显示 `ON` 时为仅音频。切换会刷新一次页面；普通视频会尽量通过 URL 的 `t` 参数保持当前进度。
 
